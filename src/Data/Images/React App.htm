@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="./React App_files/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="./React App_files/materialize.min.js"></script>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.field-position {
+  border: 1px solid black;
+  height: 20em;
+  background-color: white;
+}
+
+.current-turn-side {
+  background-color: rgb(237, 252, 215);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(148, 43, 43);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.filled-mana-crystal {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(55, 90, 204);
+  border-radius: 50%;
+  display: inline-block;
+}
+.empty-mana-crystal {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(173, 173, 173);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.damaged {
+  color: rgb(175, 16, 16);
+}
+.hand {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+  
+}
+
+.portrait {
+  height: 6em;
+}
+
+#drag-object {
+  position: absolute;
+}
+
+.usable {
+  outline: 4px solid green;
+}
+
+
+</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div id="board"><div><div class="center"><div>30</div><div><img data-identity="hero" data-playerid="1" alt="" class="portrait hero" src="./React App_files/Gul&#39;dan(618).png"></div><div><input type="button" data-identity="hero-power" data-playerid="1" value="Hero Power"></div></div><div class="center"><div>(0 / 0)</div></div><div class="hand"><img data-identity="hand" data-playerid="1" data-id="0" alt="" src="./React App_files/ArgentSquire.d05b9f03.png" class="responsive-img"><img data-identity="hand" data-playerid="1" data-id="1" alt="" src="./React App_files/DireWolfAlpha.b7ed111a.png" class="responsive-img"><img data-identity="hand" data-playerid="1" data-id="2" alt="" src="./React App_files/FlameImp.dfcbd4a7.png" class="responsive-img"><img data-identity="hand" data-playerid="1" data-id="3" alt="" src="./React App_files/Wisp.fbac6dcf.png" class="responsive-img"></div><div class="field"><div data-id="0" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="1" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="2" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="3" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="4" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="5" data-playerid="1" data-identity="field" class="field-position"></div><div data-id="6" data-playerid="1" data-identity="field" class="field-position"></div></div></div><br><div><input type="button" value="Turn"></div><br><div class="current-turn-side"><div class="field"><div data-id="0" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="1" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="2" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="3" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="4" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="5" data-playerid="0" data-identity="field" class="field-position"></div><div data-id="6" data-playerid="0" data-identity="field" class="field-position"></div></div><div class="hand"><img data-identity="hand" data-playerid="0" data-id="0" alt="" src="./React App_files/ArgentSquire.d05b9f03.png" class="usable responsive-img"><img data-identity="hand" data-playerid="0" data-id="1" alt="" src="./React App_files/DireWolfAlpha.b7ed111a.png" class="responsive-img"><img data-identity="hand" data-playerid="0" data-id="2" alt="" src="./React App_files/FlameImp.dfcbd4a7.png" class="usable responsive-img"><img data-identity="hand" data-playerid="0" data-id="3" alt="" src="./React App_files/Wisp.fbac6dcf.png" class="usable responsive-img"><img data-identity="hand" data-playerid="0" data-id="4" alt="" src="./React App_files/Wisp.fbac6dcf.png" class="usable responsive-img"></div><div class="center"><div>(1 / 1)</div><div class="filled-mana-crystal"></div></div><div class="center"><div>30</div><div><img data-identity="hero" data-playerid="0" alt="" class="portrait hero" src="./React App_files/Gul&#39;dan(618).png"></div><div><input type="button" data-identity="hero-power" data-playerid="0" value="Hero Power"></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.1b3e8347ba836ab06cb9.hot-update.js"></script>
+
+</body></html>

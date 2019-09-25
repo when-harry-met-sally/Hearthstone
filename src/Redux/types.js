@@ -1,0 +1,14 @@
+export const SET_HAND = 'SET_HAND'; 
+export const SET_TURN = 'NEXT_TURN'; 
+export const SET_TOTAL_MANA = 'SET_TOTAL_MANA';
+export const SET_CURRENT_MANA = 'SET_CURRENT_MANA';
+export const PLACE_CARD = 'PLACE_CARD';
+export const SET_HEALTH_OF_MINION = 'SET_HEALTH_OF_MINION';
+export const REMOVE_MINION_FROM_FIELD = 'REMOVE_MINION_FROM_FIELD';
+export const SET_HEALTH_OF_HERO = 'SET_HEALTH_OF_HERO';
+export const SET_CHARGE_OF_MINION = 'SET_CHARGE_OF_MINION';
+export const DRAW_CARD = 'DRAW_CARD';
+export const SET_TAPPED = 'SET_TAPPED';
+export const SUMMON_MINION = 'SUMMON_MINION';
+export const SET_PLAYERS = 'SET_PLAYERS';
+export const APPEND_LOG = 'APPEND_LOG';
